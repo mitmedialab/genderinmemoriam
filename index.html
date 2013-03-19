@@ -22,6 +22,10 @@
   </div>
   </script>
 
+  <script id="tmpl-sentence" type="text/template">
+    <div class="sentence <%=gender%>"><%=text%></div>
+  </script>
+
   <script id="tmpl-word" type="text/template">
     <% // data is word.json %>
     <div id="raphdiv1">
@@ -345,6 +349,16 @@
     </div>
     <div id="main">
     </div>
+
+    <table id ="sentences" cellspacing="80">
+      <tr>
+      <td id="female_sentences" valign="top">
+      </td>
+      <td id="male_sentences" valign="top">
+      </td>
+      </tr>
+    </table>
+
     <div id="loadingDiv"><img src='ajax-loader.gif' /></div>
   </div>
   

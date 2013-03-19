@@ -167,3 +167,50 @@ body {
   top: 45%;
   left: 45%;
 }
+
+#sentences{
+}
+
+#female_sentences{
+  width:300px;
+}
+
+#male_sentences{
+  width:300px;
+}
+
+.sentence{
+  font-size:14px;
+  line-height:120%;
+  color:#666;
+/*  background:#eee;*/
+  margin:2px;
+  margin-bottom:20px;
+}
+
+.sentence.male{
+/*  background:#eef;*/
+}
+
+.sentence.female{
+/*  background:#fee;*/
+}
+
+.sentence .highlight{
+  font-weight:strong;
+  display:inline-block;
+  padding-left:2px;
+  padding-right:2px;
+}
+
+.female .highlight{
+  color:red;
+  background:#fee;
+}
+
+.male .highlight{
+  font-weight:strong;
+  background:#eef;
+  color:blue;
+}
+

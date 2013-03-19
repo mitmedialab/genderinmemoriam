@@ -58,7 +58,7 @@ var indexURL = "http://stuff.mit.edu/~sldiehl/Gender_In_Memoriam/index.html#";
         });
       };
     },
-    
+
     relationships: function() {
       this.undelegateEvents();
       head = new HeaderView("relationships");
@@ -95,6 +95,8 @@ var indexURL = "http://stuff.mit.edu/~sldiehl/Gender_In_Memoriam/index.html#";
       var compiledTmpl = _.template($("#tmpl-word").html());
       $("#main").html(compiledTmpl({data: this.collection.toJSON()}));
       var data = this.collection.toJSON();
+
+      this.sentenceTemplate = _.template($("#tmpl-sentence").html());
       
       $("#click_instructions").hide();
       
@@ -128,9 +130,40 @@ var indexURL = "http://stuff.mit.edu/~sldiehl/Gender_In_Memoriam/index.html#";
         paper1.text(38, data[0].midline + 126 + Math.round(i*data[0].s_f), i+'-').attr({"fill": '#000', "text-anchor": 'end'});
         paper2.text(17, data[0].midline + 21 + Math.round(i*data[0].s_f), '-'+i).attr({"fill": '#000', "text-anchor": 'start'});
     };
+
+      this.displaySentenceTable();
       
     },
-    
+
+
+    displaySentenceTable: function(){
+      that = this;
+      counter = {"male":0,"female":0}
+      all_sentences = this.collection.toJSON();
+      words_included = all_sentences[0].words_included.split(", ");
+      all_sentences.splice(0,1)
+      _.each(all_sentences, function(year){
+
+        var gender = "male";
+        if(year.id.search("fem") >=0){
+          gender="female";
+        }
+        _.each(year.sentences, function(sentence){
+          if(sentence.length <= 140 && sentence.length >= 80){
+           if(counter[gender] <= 100){
+              counter[gender] += 1
+              sentence = sentence.replace("\'\'","");
+              _.each(words_included, function(word){
+                sentence = sentence.replace(word, "<span class='highlight'>" + word + "</span>");
+              });
+              $("#" + gender + "_sentences").append(that.sentenceTemplate({text:sentence, gender:gender}));
+           }
+          }
+        });
+      });
+      console.log(1);
+    }, 
+
     newSentence: function() {
       
       // Increment text displayed in last active sentdiv
