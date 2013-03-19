@@ -1,0 +1,169 @@
+#p_title {
+  font-size: 20px;
+  color: #000;
+  font-weight: normal;
+  padding: 10px 0px 0px 0px;
+}
+
+}
+
+#raphdiv1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#raphdiv2 {
+  position: absolute;
+  top: 113px;
+  left: 830px;
+}
+
+#white_box1 {
+  position: absolute;
+  top: 118px;
+  left:46px;
+  width: 330px;
+  padding: 10px;
+  font-size: 12px;
+  min-height: 111px;
+}
+
+body {
+  font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#welcome {
+  position: absolute;
+  top: 130px;
+  left:46px;
+  width: 670px;
+  padding: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+#about {
+  position: absolute;
+  top: 130px;
+  left:46px;
+  width: 720px;
+  padding: 15px;
+  font-size: 12px;
+  color: #333;
+}
+
+#click_instructions {
+  font-size: 10px;
+  color: #000;
+  position: absolute;
+  top: 243px;
+  left: 450px;
+  width:150px;
+  cursor: pointer;
+}
+
+#show_active_year {
+  font-size: 10px;
+  color: #000;
+  position: absolute;
+  top: 243px;
+  left: 585px;
+  width:150px;
+  cursor: pointer;
+}
+
+#subheader {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  width: 800px;
+  height: 75px;
+}
+
+#active_professions {
+  position: absolute;
+  left: 150px;
+  top: 10px;
+  font-size:12px;
+  color: #00A352;
+  text-decoration:underline;
+}
+
+#active_relationships {
+  position: absolute;
+  left: 300px;
+  top: 10px;
+  font-size:12px;
+  color: #00A352;
+  text-decoration:underline;
+}
+
+#active_lifestories {
+  position: absolute;
+  left: 450px;
+  top: 10px;
+  font-size:12px;
+  color: #00A352;
+  text-decoration:underline;
+}
+
+#professions {
+  position: absolute;
+  left: 150px;
+  top: 10px;
+  color: #000;
+  font-size:12px;
+  cursor:pointer;
+}
+
+#professions:hover {
+  color: #00A352;
+}
+
+#relationships {
+  position: absolute;
+  left: 300px;
+  top: 10px;
+  color: #000;
+  font-size:12px;
+  cursor:pointer;
+}
+
+#relationships:hover {
+  color: #00A352;
+}
+
+#lifestories {
+  position: absolute;
+  left: 450px;
+  top: 10px;
+  color: #000;
+  font-size:12px;
+  cursor:pointer;
+}
+
+#lifestories:hover {
+  color: #00A352;
+}
+
+#subscript {
+  font-size: 11px;
+  position:absolute;
+  top: 660px;
+  left: 40px;
+  width: 800px;
+}
+
+#home_example {
+  float: left;
+  border: 2px solid #000;
+  margin: 10px 20px 10px 10px;
+  cursor: pointer;
+}
+
+#loadingDiv {
+  position: fixed;
+  top: 45%;
+  left: 45%;
+}

@@ -1,0 +1,114 @@
+[
+    {
+        "height_header_mal": 9, 
+        "width_header_mal": 4, 
+        "word": "visual arts", 
+        "width_header_fem": 5, 
+        "height_header_fem": 12
+    }, 
+    {
+        "height_header_mal": 3, 
+        "width_header_mal": 2, 
+        "word": "fashion", 
+        "width_header_fem": 4, 
+        "height_header_fem": 7
+    }, 
+    {
+        "height_header_mal": 25, 
+        "width_header_mal": 9, 
+        "word": "business", 
+        "width_header_fem": 7, 
+        "height_header_fem": 18
+    }, 
+    {
+        "height_header_mal": 9, 
+        "width_header_mal": 4, 
+        "word": "dance", 
+        "width_header_fem": 7, 
+        "height_header_fem": 18
+    }, 
+    {
+        "height_header_mal": 19, 
+        "width_header_mal": 7, 
+        "word": "science", 
+        "width_header_fem": 6, 
+        "height_header_fem": 13
+    }, 
+    {
+        "height_header_mal": 6, 
+        "width_header_mal": 3, 
+        "word": "journalism", 
+        "width_header_fem": 4, 
+        "height_header_fem": 7
+    }, 
+    {
+        "height_header_mal": 29, 
+        "width_header_mal": 9, 
+        "word": "literature", 
+        "width_header_fem": 11, 
+        "height_header_fem": 35
+    }, 
+    {
+        "height_header_mal": 22, 
+        "width_header_mal": 8, 
+        "word": "academia", 
+        "width_header_fem": 7, 
+        "height_header_fem": 18
+    }, 
+    {
+        "height_header_mal": 15, 
+        "width_header_mal": 6, 
+        "word": "sports", 
+        "width_header_fem": 5, 
+        "height_header_fem": 10
+    }, 
+    {
+        "height_header_mal": 22, 
+        "width_header_mal": 8, 
+        "word": "acting", 
+        "width_header_fem": 10, 
+        "height_header_fem": 30
+    }, 
+    {
+        "height_header_mal": 38, 
+        "width_header_mal": 11, 
+        "word": "leadership", 
+        "width_header_fem": 9, 
+        "height_header_fem": 29
+    }, 
+    {
+        "height_header_mal": 15, 
+        "width_header_mal": 6, 
+        "word": "music", 
+        "width_header_fem": 7, 
+        "height_header_fem": 20
+    }, 
+    {
+        "height_header_mal": 19, 
+        "width_header_mal": 7, 
+        "word": "politics", 
+        "width_header_fem": 6, 
+        "height_header_fem": 13
+    }, 
+    {
+        "height_header_mal": 5, 
+        "width_header_mal": 3, 
+        "word": "teaching", 
+        "width_header_fem": 4, 
+        "height_header_fem": 8
+    }, 
+    {
+        "height_header_mal": 12, 
+        "width_header_mal": 5, 
+        "word": "law", 
+        "width_header_fem": 4, 
+        "height_header_fem": 9
+    }, 
+    {
+        "height_header_mal": 16, 
+        "width_header_mal": 6, 
+        "word": "military", 
+        "width_header_fem": 4, 
+        "height_header_fem": 7
+    }
+]

@@ -1,0 +1,142 @@
+[
+    {
+        "height_header_mal": 5, 
+        "width_header_mal": 3, 
+        "word": "established", 
+        "width_header_fem": 3, 
+        "height_header_fem": 6
+    }, 
+    {
+        "height_header_mal": 8, 
+        "width_header_mal": 4, 
+        "word": "major", 
+        "width_header_fem": 4, 
+        "height_header_fem": 7
+    }, 
+    {
+        "height_header_mal": 5, 
+        "width_header_mal": 3, 
+        "word": "love", 
+        "width_header_fem": 4, 
+        "height_header_fem": 8
+    }, 
+    {
+        "height_header_mal": 10, 
+        "width_header_mal": 5, 
+        "word": "won", 
+        "width_header_fem": 5, 
+        "height_header_fem": 10
+    }, 
+    {
+        "height_header_mal": 6, 
+        "width_header_mal": 3, 
+        "word": "power", 
+        "width_header_fem": 3, 
+        "height_header_fem": 4
+    }, 
+    {
+        "height_header_mal": 5, 
+        "width_header_mal": 3, 
+        "word": "culture", 
+        "width_header_fem": 3, 
+        "height_header_fem": 6
+    }, 
+    {
+        "height_header_mal": 13, 
+        "width_header_mal": 6, 
+        "word": "career", 
+        "width_header_fem": 6, 
+        "height_header_fem": 14
+    }, 
+    {
+        "height_header_mal": 14, 
+        "width_header_mal": 6, 
+        "word": "national", 
+        "width_header_fem": 6, 
+        "height_header_fem": 14
+    }, 
+    {
+        "height_header_mal": 6, 
+        "width_header_mal": 3, 
+        "word": "democrat", 
+        "width_header_fem": 3, 
+        "height_header_fem": 5
+    }, 
+    {
+        "height_header_mal": 5, 
+        "width_header_mal": 3, 
+        "word": "republican", 
+        "width_header_fem": 3, 
+        "height_header_fem": 4
+    }, 
+    {
+        "height_header_mal": 10, 
+        "width_header_mal": 5, 
+        "word": "award", 
+        "width_header_fem": 5, 
+        "height_header_fem": 12
+    }, 
+    {
+        "height_header_mal": 6, 
+        "width_header_mal": 3, 
+        "word": "elected", 
+        "width_header_fem": 3, 
+        "height_header_fem": 4
+    }, 
+    {
+        "height_header_mal": 8, 
+        "width_header_mal": 4, 
+        "word": "taught", 
+        "width_header_fem": 4, 
+        "height_header_fem": 9
+    }, 
+    {
+        "height_header_mal": 8, 
+        "width_header_mal": 4, 
+        "word": "black", 
+        "width_header_fem": 4, 
+        "height_header_fem": 9
+    }, 
+    {
+        "height_header_mal": 5, 
+        "width_header_mal": 3, 
+        "word": "interest", 
+        "width_header_fem": 3, 
+        "height_header_fem": 5
+    }, 
+    {
+        "height_header_mal": 7, 
+        "width_header_mal": 4, 
+        "word": "social", 
+        "width_header_fem": 4, 
+        "height_header_fem": 9
+    }, 
+    {
+        "height_header_mal": 7, 
+        "width_header_mal": 4, 
+        "word": "action", 
+        "width_header_fem": 4, 
+        "height_header_fem": 8
+    }, 
+    {
+        "height_header_mal": 11, 
+        "width_header_mal": 5, 
+        "word": "religion", 
+        "width_header_fem": 5, 
+        "height_header_fem": 10
+    }, 
+    {
+        "height_header_mal": 12, 
+        "width_header_mal": 5, 
+        "word": "book", 
+        "width_header_fem": 6, 
+        "height_header_fem": 14
+    }, 
+    {
+        "height_header_mal": 5, 
+        "width_header_mal": 3, 
+        "word": "important", 
+        "width_header_fem": 3, 
+        "height_header_fem": 5
+    }
+]

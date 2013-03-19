@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gender In Memoriam</title>
+  <script src="jquery.js"></script>
+  <script src="underscore.js"></script>
+  <script src="raphael.js"></script>
+  <script src="backbone.js"></script>
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <script id="tmpl-index" type="text/template">
+  <div id="welcome">
+  <img id="home_example" src="home_example1.png" />
+  <br>
+  <div id="p_title">Gender In Memoriam</div><br>
+  How does the language that the U.S. media uses to talk about society's heroes, leaders, and visionaries vary by gender? How has that language changed over the past quarter-century?
+  <br><br>
+  This interactive piece explores these questions by looking at the frequency of certain words in featured obituaries in the New York Times from 1987 to 2006, separated by gender.
+  <br><br>
+  Between 1987 and 2006, the ratio of male obituaries to female obituaries in the New York Times remained fairly stagnant with at least four male obituaries for each female obituary. 
+  <br><br>
+  With this gap in mind, this piece takes a look at the similarities and differences in the language journalists use to describe mens' and womens' lifelong contributions. Click the text on the graphs to take a closer look at the way these words are being used.
+  </div>
+  </script>
+
+  <script id="tmpl-word" type="text/template">
+    <% // data is word.json %>
+    <div id="raphdiv1">
+    </div>
+    
+    <div id="raphdiv2">
+    </div>
+    
+    <% // Div to contain Word title and words included info %>
+    <div id=white_box1>
+      <div id="p_title"><%= data[0].word %></div>
+      Words included in search: <%= data[0].words_included %>.
+      <br><br>
+      Click the items on the graph to look through sentences containing these words for that year and gender.
+    </div>
+    
+    <% // Picture of figure kneeling by tombstone %>
+    <img src="gravestone.jpg" 
+    style="position: absolute;
+           left: 406px; 
+           top: 120px;"/>
+           
+    <% // Instructions to click active div %>
+    <div id="click_instructions">
+    click for next sentence
+    </div>
+    <div id="show_active_year"></div>
+      
+    <% // Divs to mark graph, contain sentences and interactivity %>
+    
+    <% var width = data[0].div_width + data[0].div_spacing; %>
+    
+    <% // Female divs %>
+    <% for (var i=20; i >= 1; i--){%>
+      <% model = data[i] %>
+      
+      <% // year labels %>
+      <div id="year"
+           style= "
+             position: absolute;
+             top: <%= parseInt(data[0].midline) + 120 %>px;
+             left: <%= data[0].start_x + width * (i-1) %>px;
+             width: <%= data[0].div_width %>px;
+             text-align: center;
+             font-size: 11px;
+             color: #000;
+           ">
+           <%= i + 1986 %>
+      </div>
+      
+      <% // Female graph rectangles %>
+      
+      <div style = "
+            position: absolute;
+            top: <%= parseInt(model.start_y) + 111 %>px;
+            left: <%= data[0].start_x - 2 + width * (i-1) %>px;
+            height: <%= model.height + 13 %>px;
+            width: <%= data[0].div_width + 7 %>px;
+            background-color: #B8A5A5;
+            
+      "></div>
+          
+      <% // Female sentence divs %>
+      <% if (i>1) { %>
+        <div id=<%= model.id %> 
+           regId=<%= model.id %> 
+           year=<%= 1986+i %>
+           regHeight=<%= model.height + 10 %> 
+           regWidth=<%= data[0].div_width + 2 %> 
+           regLeft=<%= data[0].start_x + width * (i-1) %> 
+           regTop=<%= parseInt(model.start_y) + 111 %> 
+           class="sentdiv" 
+           style = "
+            position: absolute;
+            overflow: hidden;
+            top: <%= parseInt(model.start_y) + 111 %>px;
+            left: <%= data[0].start_x + width * (i-1) %>px;
+            height: <%= model.height + 10 %>px;
+            width: <%= data[0].div_width + 2 %>px;
+            font-size: 10px;
+            color: #000;
+            cursor: pointer;
+        ">
+          <%= model.sentences[0] %>
+        </div>
+        
+        <% } else { // Gotta start with an 'active' id %>
+        
+          <div id='active'
+        regId=<%= model.id %>  
+        year=1987 
+        regHeight=<%= model.height + 10 %> 
+        regWidth=<%= data[0].div_width + 2 %> 
+        regLeft=<%= data[0].start_x %> 
+        regTop=<%= parseInt(model.start_y) + 111 %> 
+        class="sentdiv" style = "
+         position: absolute;
+         overflow: hidden;
+         top: <%= parseInt(model.start_y) + 111 %>px;
+         left: <%= data[0].start_x %>px;
+         height: <%= model.height + 10 %>px;
+         width: <%= data[0].div_width + 2 %>px;
+         font-size: 10px;
+         color: #000;
+         cursor: pointer;
+
+    ">
+      <%= model.sentences[0] %>
+    </div>
+        
+        <% } %>      
+    <% } %>
+      
+    <% // Male sentence divs %>
+    <% for (var i=40; i >= 21; i--){%>
+      <% model = data[i] %>
+      
+      <% // Rectangles for graph %>
+      <div style = "
+            position: absolute;
+            top: <%= parseInt(model.start_y) + 130 %>px;
+            left: <%= data[0].start_x - 2 + width * (i-21) %>px;
+            height: <%= model.height + 13 %>px;
+            width: <%= data[0].div_width + 7 %>px;
+            background-color: #99ADCC;
+            
+      "></div>
+      
+      <div id=<%= model.id %> 
+           regId=<%= model.id %>  
+           year=<%= 1966+i %>
+           regHeight=<%= model.height + 10 %> 
+           regWidth=<%= data[0].div_width + 2 %> 
+           regLeft=<%= data[0].start_x + width * (i-21) %> 
+           regTop=<%= parseInt(model.start_y) + 130 %> 
+           class="sentdiv" 
+           style = "
+            position: absolute;
+            overflow: hidden;
+            top: <%= parseInt(model.start_y) + 130 %>px;
+            left: <%= data[0].start_x + width * (i-21) %>px;
+            height: <%= model.height + 10 %>px;
+            width: <%= data[0].div_width + 2 %>px;
+            font-size: 10px;
+            color: #000;
+            cursor: pointer;
+      ">
+        <%= model.sentences[0] %>
+      </div>
+      
+    <% } %>
+      
+  </script>
+
+  <script id="tmpl-professions" type="text/template">
+  
+    <div id="active_professions">
+       profession words
+    </div>
+  
+    <div id="relationships">
+       relationship words
+    </div>
+    
+    <div id="lifestories">
+       life story words
+    </div>
+    
+    <div id="subheader">
+      <script>
+      
+      var paper = new Raphael("subheader", 800, 75);
+      <% var indexURL = "http://stuff.mit.edu/~sldiehl/Gender_In_Memoriam/index.html#"; %>
+      
+      // Place home and about links
+      
+      var homelink = paper.text(20, 45, "about");
+      homelink.attr({"fill": "#000", "font-size": 11});
+      homelink.mouseover(function() { 
+        homelink.attr({"fill": "#00A352","cursor": "pointer"});
+      });
+      homelink.mouseout(function() {homelink.attr("fill", "#000");});
+      homelink.node.onclick = function () {
+        window.location = "<%= indexURL %>";
+      };
+
+      
+      // Place profession words header
+      <% for (var i=0; i < words.length; i++) { %>
+        <% var word = words[i]; %>
+        var text1<%= i %> = 
+            paper.text(<%= 150 + 30 * i %>, 45, "<%= word.word %>");
+        text1<%= i %>.attr({"fill": "#000", "font-size":  12});
+        text1<%= i %>.rotate(35);
+        text1<%= i %>.mouseover(function() { 
+          text1<%= i %>.attr({"fill": "#00A352","cursor": "pointer"});
+        });
+        text1<%= i %>.mouseout(function() {text1<%= i %>.attr("fill", "#000");})
+        text1<%= i %>.node.onclick = function () {
+          window.location = "<%= indexURL + word.word %>";
+        };
+      <% }; %>
+      </script>
+    </div>
+    
+  </script>
+
+  <script id="tmpl-relationships" type="text/template">
+  
+    <div id="professions">
+       profession words
+    </div>
+  
+    <div id="active_relationships">
+       relationship words
+    </div>
+    
+    <div id="lifestories">
+       life story words
+    </div>
+    
+    <div id="subheader">
+      <script>
+      
+      var paper = new Raphael("subheader", 800, 75);
+      <% var indexURL = "http://stuff.mit.edu/~sldiehl/Gender_In_Memoriam/index.html#"; %>
+      
+      // Place home and about links
+      
+      var homelink = paper.text(20, 45, "about");
+      homelink.attr({"fill": "#000", "font-size": 11});
+      homelink.mouseover(function() { 
+        homelink.attr({"fill": "#00A352","cursor": "pointer"});
+      });
+      homelink.mouseout(function() {homelink.attr("fill", "#000");});
+      homelink.node.onclick = function () {
+        window.location = "<%= indexURL %>";
+      };
+         
+      // Place relationships words header
+      <% for (var i=0; i < words.length; i++) { %>
+        <% var word = words[i]; %>
+        var text1<%= i %> = 
+            paper.text(<%= 150 + 30 * i %>, 45, "<%= word.word %>");
+        text1<%= i %>.attr({"fill": "#000", "font-size":  12});
+        text1<%= i %>.rotate(35);
+        text1<%= i %>.mouseover(function() { 
+          text1<%= i %>.attr({"fill": "#00A352","cursor": "pointer"});
+        });
+        text1<%= i %>.mouseout(function() {text1<%= i %>.attr("fill", "#000");})
+        text1<%= i %>.node.onclick = function () {
+          window.location = "<%= indexURL + word.word %>";
+        };
+      <% }; %>
+      </script>
+    </div>
+    
+  </script>  
+  
+    <script id="tmpl-lifestories" type="text/template">
+  
+    <div id="professions">
+       profession words
+    </div>
+  
+    <div id="relationships">
+       relationship words
+    </div>
+    
+    <div id="active_lifestories">
+       life story words
+    </div>
+    
+    <div id="subheader">
+      <script>
+      
+      var paper = new Raphael("subheader", 800, 75);
+      <% var indexURL = "http://stuff.mit.edu/~sldiehl/Gender_In_Memoriam/index.html#"; %>
+      
+      // Place home and about links
+      
+      var homelink = paper.text(20, 45, "about");
+      homelink.attr({"fill": "#000", "font-size": 11});
+      homelink.mouseover(function() { 
+        homelink.attr({"fill": "#00A352","cursor": "pointer"});
+      });
+      homelink.mouseout(function() {homelink.attr("fill", "#000");});
+      homelink.node.onclick = function () {
+        window.location = "<%= indexURL %>";
+      };
+      
+      // Place life stories words header
+      <% for (var i=0; i < words.length; i++) { %>
+        <% var word = words[i]; %>
+        var text1<%= i %> = 
+            paper.text(<%= 90 + 28 * i %>, 45, "<%= word.word %>");
+        text1<%= i %>.attr({"fill": "#000", "font-size":  12});
+        text1<%= i %>.rotate(35);
+        text1<%= i %>.mouseover(function() { 
+          text1<%= i %>.attr({"fill": "#00A352","cursor": "pointer"});
+        });
+        text1<%= i %>.mouseout(function() {text1<%= i %>.attr("fill", "#000");})
+        text1<%= i %>.node.onclick = function () {
+          window.location = "<%= indexURL + word.word %>";
+        };
+      <% }; %>
+      </script>
+    </div>
+    
+  </script>
+  
+</head>
+
+<body>
+  <div id="container">
+    <div id="subscript">
+    Gender in Memoriam, by Sophie Diehl. This project was supervised by <a href="http://twitter.com/natematias">J. Nathan Matias</a> at the MIT Media Lab <a href="http://civic.mit.edu/">Center for Civic Media</a>, using data he and <a href="https://twitter.com/rahulbot">Rahul Barghava</a> collected from the <a href="http://open.blogs.nytimes.com/2009/01/12/fatten-up-your-corpus/">New York Times Annotated Corpus.</a>
+    </div>
+
+    <div id="header">
+    </div>
+    <div id="main">
+    </div>
+    <div id="loadingDiv"><img src='ajax-loader.gif' /></div>
+  </div>
+  
+  <script src="the_script.js"></script>
+  
+</body>
+</html>

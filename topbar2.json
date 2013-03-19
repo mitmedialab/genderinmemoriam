@@ -1,0 +1,100 @@
+[
+    {
+        "height_header_mal": 15, 
+        "width_header_mal": 6, 
+        "word": "family", 
+        "width_header_fem": 7, 
+        "height_header_fem": 18
+    }, 
+    {
+        "height_header_mal": 22, 
+        "width_header_mal": 8, 
+        "word": "son", 
+        "width_header_fem": 7, 
+        "height_header_fem": 19
+    }, 
+    {
+        "height_header_mal": 19, 
+        "width_header_mal": 7, 
+        "word": "daughter", 
+        "width_header_fem": 8, 
+        "height_header_fem": 21
+    }, 
+    {
+        "height_header_mal": 10, 
+        "width_header_mal": 5, 
+        "word": "children", 
+        "width_header_fem": 6, 
+        "height_header_fem": 16
+    }, 
+    {
+        "height_header_mal": 16, 
+        "width_header_mal": 6, 
+        "word": "grandchildren", 
+        "width_header_fem": 6, 
+        "height_header_fem": 15
+    }, 
+    {
+        "height_header_mal": 23, 
+        "width_header_mal": 8, 
+        "word": "wife", 
+        "width_header_fem": 4, 
+        "height_header_fem": 8
+    }, 
+    {
+        "height_header_mal": 2, 
+        "width_header_mal": 2, 
+        "word": "husband", 
+        "width_header_fem": 8, 
+        "height_header_fem": 23
+    }, 
+    {
+        "height_header_mal": 11, 
+        "width_header_mal": 5, 
+        "word": "marriage", 
+        "width_header_fem": 7, 
+        "height_header_fem": 19
+    }, 
+    {
+        "height_header_mal": 5, 
+        "width_header_mal": 3, 
+        "word": "divorce", 
+        "width_header_fem": 4, 
+        "height_header_fem": 9
+    }, 
+    {
+        "height_header_mal": 11, 
+        "width_header_mal": 5, 
+        "word": "father", 
+        "width_header_fem": 5, 
+        "height_header_fem": 11
+    }, 
+    {
+        "height_header_mal": 8, 
+        "width_header_mal": 4, 
+        "word": "mother", 
+        "width_header_fem": 6, 
+        "height_header_fem": 14
+    }, 
+    {
+        "height_header_mal": 14, 
+        "width_header_mal": 6, 
+        "word": "brother", 
+        "width_header_fem": 5, 
+        "height_header_fem": 13
+    }, 
+    {
+        "height_header_mal": 12, 
+        "width_header_mal": 5, 
+        "word": "sister", 
+        "width_header_fem": 6, 
+        "height_header_fem": 16
+    }, 
+    {
+        "height_header_mal": 6, 
+        "width_header_mal": 3, 
+        "word": "friend", 
+        "width_header_fem": 4, 
+        "height_header_fem": 8
+    }
+]
